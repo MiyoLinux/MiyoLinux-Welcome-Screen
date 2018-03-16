@@ -1,0 +1,26 @@
+#!/bin/sh
+
+EDITOR=leafpad
+
+yad --form --title="Welcome to MiyoLinux!" --height=360 --width=690 \
+--center --window-icon=/usr/share/miyolinux/miyolinux.png \
+--borders=10 --no-buttons \
+--text="<span font_weight='bold' font='19' color='#4A90D9'>       Welcome, and thank you for your interest in MiyoLinux!</span> 
+
+Thank you for giving MiyoLinux a try! MiyoLinux has one main philosophy...to deliver a minimal and base system that will allow the user to <span font_weight='bold'>Make It Your Own</span>.  Apart from some basic tools, what goes on your system is entirely up to you! Thanks again, have fun, and enjoy yourself!
+
+Please Note:  By default, PCManFM is controlling the desktop in MiyoLinux. In this mode, wallpapers are changed with the Desktop Preferences application. Further detail is given in the Release Notes. You can read the Live User Notes, the Release Notes, or access the Installer straight from the Desktop or by clicking on <span font_weight='bold'>Read the Notes</span>. 
+
+MiyoLinux uses the US keyboard layout by default; however, you can change the keyboard layout in the live session by clicking on <span font_weight='bold'>Change Keyboard Layout</span>. When the application opens, find your desired layout, click on it, then click OK. The system will then adopt your layout.
+
+Connect to either a wired or wireless network by clicking on <span font_weight='bold'>Network Connections</span>.
+
+Finally, if you're already familiar with MiyoLinux and want to jump right in, you can install the system straight from here by clicking on <span font_weight='bold'>Install MiyoLinux</span>. 
+
+Otherwise, just close (or minimize) this window if you would prefer to explore MiyoLinux further. 
+" \
+--columns=4 \
+--field="   Read the Notes!system-file-manager!PCManFM":fbtn "pcmanfm $HOME/Desktop" \
+--field="   Change Keyboard Layout!input-keyboard!Change the keyboard layout":fbtn "/bin/miyo-keyboard" \
+--field="   Network Connections!preferences-system-network!Connect to a wired or wireless network":fbtn "wicd-gtk --no-tray" \
+--field="   Install MiyoLinux!gtk-save!Install MiyoLinux onto your computer":fbtn "/usr/bin/refractainstaller-wrapper.sh" \

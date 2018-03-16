@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Welcome to MiyoLinux!
+Type=Application
+Exec=bash -c "sleep 9 && /bin/miyo-welcome"
+Terminal=false
+Icon=/usr/share/miyolinux/miyolinux.png
+Comment=Welcome to MiyoLinux
+Categories=System;
+NoDisplay=true
